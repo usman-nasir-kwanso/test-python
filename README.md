@@ -13,6 +13,9 @@ python-v2/
 ├── hf-basic/           # Hugging Face transformers pipeline
 ├── weather_agent/      # AI agent with function calling (real weather data)
 ├── rag/                # RAG — ask questions about a PDF
+├── rag-queue/          # Queue-based RAG pipeline with FastAPI + RQ + Valkey
+├── cursor-pagination/  # Cursor-based pagination reference docs
+├── fastapi/            # FastAPI concept handbook and production guides
 ├── requirements.txt
 └── venv/
 ```
@@ -40,6 +43,9 @@ python prompt-styles/chatml-style.py
 | `hf-basic/` | Using Hugging Face pipelines for multimodal inference |
 | `weather_agent/` | Function calling — model decides when to call your code |
 | `rag/` | Retrieval-Augmented Generation — Q&A over PDFs with vector search |
+| `rag-queue/` | Async RAG processing using queue workers |
+| `cursor-pagination/` | Scalable pagination strategy for APIs |
+| `fastapi/` | Core-to-advanced FastAPI concepts and production runbooks |
 
 ## Requirements
 
@@ -48,4 +54,24 @@ python prompt-styles/chatml-style.py
 - Ollama (for ollama-fastapi) — [install here](https://ollama.com/)
 - Docker (for rag) — runs Qdrant vector database
 
-Each folder has its own `README.md` with detailed explanations.
+## Documentation Index
+
+- [`tokenization/README.md`](tokenization/README.md)
+- [`prompting/README.md`](prompting/README.md)
+- [`prompt-styles/README.md`](prompt-styles/README.md)
+- [`ollama-fastapi/README.md`](ollama-fastapi/README.md)
+- [`hf-basic/README.md`](hf-basic/README.md)
+- [`weather_agent/README.md`](weather_agent/README.md)
+- [`rag/README.md`](rag/README.md)
+- [`rag-queue/README.md`](rag-queue/README.md)
+- [`cursor-pagination/README.md`](cursor-pagination/README.md)
+- [`fastapi/README.md`](fastapi/README.md)
+
+## Where to Start (Beginner Path)
+
+1. Start with [`tokenization/README.md`](tokenization/README.md)
+2. Move to [`prompting/README.md`](prompting/README.md)
+3. Compare formats in [`prompt-styles/README.md`](prompt-styles/README.md)
+4. Learn function tools in [`weather_agent/README.md`](weather_agent/README.md)
+5. Build retrieval systems via [`rag/README.md`](rag/README.md) and [`rag-queue/README.md`](rag-queue/README.md)
+6. Study framework best practices in [`fastapi/README.md`](fastapi/README.md)

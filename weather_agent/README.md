@@ -78,3 +78,15 @@ partly cloudy with a temperature of 18°C (64°F).
 | **Agent Loop** | The cycle: ask model → call tool → feed result → get final answer |
 | **`function_call` output** | Model's response saying "call this function with these args" |
 | **`function_call_output`** | Your response sending the function's return value back to the model |
+
+## Troubleshooting
+
+- **No weather returned**: check internet access; `wttr.in` must be reachable from your machine.
+- **OpenAI auth errors**: confirm `.env` contains a valid `OPENAI_API_KEY`.
+- **Model does not call tool**: make system instructions explicit and ensure tool schema matches function arguments.
+- **Unexpected city parsing**: ask users to include city name clearly in the prompt.
+
+## Related Docs
+
+- [`../prompting/README.md`](../prompting/README.md) for other prompting techniques
+- [`../fastapi/README.md`](../fastapi/README.md) if you want to expose this as an API

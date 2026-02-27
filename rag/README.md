@@ -73,6 +73,14 @@ python rag/index.py
 python rag/chat.py
 ```
 
+## Troubleshooting
+
+- **`Connection refused` on Qdrant**: ensure `docker compose up -d` was run in `rag/` and `http://localhost:6333` is reachable.
+- **`Collection not found`**: run `python rag/index.py` first to create/populate `djermaya_solar`.
+- **Empty or weak answers**: increase `similarity_search` results or improve chunking strategy.
+- **OpenAI auth errors**: verify `.env` has a valid `OPENAI_API_KEY`.
+- **Import errors**: activate venv before running scripts (`source venv/bin/activate`).
+
 ## Key Concepts
 
 | Concept | What It Means |
@@ -89,3 +97,7 @@ python rag/chat.py
 - PDFs can be hundreds of pages — won't fit in the context window
 - Even if it fits, the LLM gets distracted by irrelevant sections
 - RAG retrieves only the **relevant** parts, so answers are focused and accurate
+
+## Related Docs
+
+- [`../rag-queue/README.md`](../rag-queue/README.md) for async queue-based RAG processing

@@ -49,3 +49,15 @@ curl -X POST http://127.0.0.1:8000/chat \
 ```
 
 **Docs:** `http://127.0.0.1:8000/docs` (auto-generated Swagger UI)
+
+## Troubleshooting
+
+- **`ModuleNotFoundError: fastapi`**: activate venv and install extras: `pip install "fastapi[standard]"`.
+- **`Connection refused` to Ollama**: start Ollama and verify `http://localhost:11434` is reachable.
+- **Model not found**: run `ollama pull gemma:2b` before requests.
+- **422 validation errors**: ensure request body is JSON and contains `message`.
+- **Slow responses**: first request may be slow due to model warmup; subsequent calls are faster.
+
+## Related Docs
+
+- [`../fastapi/README.md`](../fastapi/README.md) for FastAPI concepts and production patterns
